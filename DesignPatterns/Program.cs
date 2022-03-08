@@ -10,6 +10,8 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            SpecificationPattern.SpecificationPattern.Execute();
+            Console.ReadKey();
         }
     }
 }
