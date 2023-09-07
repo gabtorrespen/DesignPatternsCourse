@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.SpecificationPattern
+namespace DesignPatterns.SOLID.OpenClosed
 {
     public enum Material
     {
