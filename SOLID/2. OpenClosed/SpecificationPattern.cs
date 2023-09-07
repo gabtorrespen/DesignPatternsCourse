@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.SOLID.OpenClosed
+namespace DesignPatterns.SOLID
 {
     public enum Material
     {
@@ -40,6 +40,11 @@ namespace DesignPatterns.SOLID.OpenClosed
         }
     }
 
+
+    /*
+     * Instead of having to change the filter implementation,
+     * you just add new spec implementations and use them with the filter
+     */
     public class MaterialSpecification : ISpecification<Instrument>
     {
         private Material material;
@@ -89,6 +94,9 @@ namespace DesignPatterns.SOLID.OpenClosed
         }
     }
 
+    /*
+     * It goes thru the items and return the ones who satisfied the spec
+     */
     public class InstrumentFilter : IFilter<Instrument>
     {
         public IEnumerable<Instrument> Filter(IEnumerable<Instrument> items, ISpecification<Instrument> spec)
@@ -99,6 +107,7 @@ namespace DesignPatterns.SOLID.OpenClosed
         }
     }
 
+    // This way, you can easily use the filter as an extended method of a product list
     public static class InstrumentExtensions
     {
         static InstrumentFilter instrumentFilter;

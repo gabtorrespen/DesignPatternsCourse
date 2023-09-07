@@ -1,5 +1,10 @@
 ﻿using System;
-using DesignPatterns.SOLID.OpenClosed;
+using DesignPatterns.SOLID;
 
-SpecificationPattern.Execute();
+/* SOLID */
+//JournalExample.Execute();
+//SpecificationPattern.Execute();
+//ShapesExample.Execute();
+ResearchRelationshipsExample.Execute();
+
 Console.ReadKey();
